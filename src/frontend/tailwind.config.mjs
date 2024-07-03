@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-import { fontFamily } from "tailwindcss/defaultTheme";
 import tailwindcssForms from "@tailwindcss/forms";
-import tailwindcssAnimate from "tailwindcss-animate";
 import tailwindcssTypography from "@tailwindcss/typography";
+import tailwindcssAnimate from "tailwindcss-animate";
 import tailwindcssDottedBackground from "tailwindcss-dotted-background";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 import plugin from "tailwindcss/plugin";
 
@@ -104,19 +104,20 @@ const config = {
         ice: "var(--ice)",
         selected: "var(--selected)",
         hover: "var(--hover)",
-        white: "var(--white)",
+        white: "#ffffff", // Set white as the base color
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: "#FFFFFF", // White
+        "background-secondary": "#F3F4F6", // Gray-100
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#4F46E5", // Indigo-600
+          foreground: "#FFFFFF", // White
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#10B981", // Emerald-500
+          foreground: "#FFFFFF", // White
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -127,8 +128,8 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "#F59E0B", // Amber-500
+          foreground: "#FFFFFF", // White
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -138,6 +139,16 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "text-primary": "#1F2937", // Gray-800
+        "text-secondary": "#4B5563", // Gray-600
+        success: "#10B981", // Emerald-500
+        warning: "#F59E0B", // Amber-500
+        error: {
+          DEFAULT: "#EF4444", // Red-500
+          background: "#FEE2E2", // Red-100
+          foreground: "#FFFFFF", // White
+        },
+        info: "#3B82F6", // Blue-500
       },
       borderRadius: {
         lg: `var(--radius)`,
@@ -157,7 +168,6 @@ const config = {
       },
     },
   },
-
   plugins: [
     tailwindcssAnimate,
     tailwindcssForms({

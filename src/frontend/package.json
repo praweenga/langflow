@@ -87,24 +87,17 @@
     "type-check": "tsc --noEmit --pretty --project tsconfig.json && vite"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
   },
-  "proxy": "http://127.0.0.1:7860",
+  "proxy": "http://127.0.0.1:7861",
   "devDependencies": {
     "@playwright/test": "^1.44.1",
     "@swc/cli": "^0.3.12",

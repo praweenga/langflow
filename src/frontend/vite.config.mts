@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
   const apiRoutes = ["^/api/v1/", "/health"];
 
   // Use environment variable to determine the target.
-  const target = process.env.VITE_PROXY_TARGET || "http://127.0.0.1:7860";
+  const target = process.env.VITE_PROXY_TARGET || "http://127.0.0.1:7861";
 
   // Use environment variable to determine the UI server port
   const port = Number(process.env.VITE_PORT) || 3000;
